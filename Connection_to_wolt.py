@@ -164,7 +164,7 @@ def fetchDataFromRestaurant(url, cursor, conn, cityName, cities):
             saveDataInMenu(cursor, restaurant_serial, categoryName, name, price, spicy)
         conn.commit()
         print("Finished!")
-        time.sleep(3)  #to prevent Status code: 429
+        time.sleep(2)  #to prevent Status code: 429
         #return menu_items
 
 
