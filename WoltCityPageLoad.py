@@ -62,12 +62,14 @@ def get_restaurant_links(url, search_text):
         # After scrolling, find all restaurant links
         restaurants = driver.find_elements(By.CLASS_NAME, "dzrkw9x")  # Adjust this class name if needed
 
+        cities = returnCitiesNames(cursor)
+
         # Loop through each restaurant and print its href
         for restaurant in restaurants:
             link_element = restaurant.find_element(By.TAG_NAME, "a")  # Assuming each restaurant div has an anchor tag
             href = link_element.get_attribute("href")
             print("Restaurant href:", href)
-            fetchDataFromRestaurant(href, cursor, conn, search_text)
+            fetchDataFromRestaurant(href, cursor, conn, search_text, cities)
 
     except Exception as e:
         print("An error occurred:", e)

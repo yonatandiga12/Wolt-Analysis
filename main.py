@@ -15,7 +15,7 @@ from SaveInDB import *
 
 
 if __name__ == '__main__':
-    get_restaurant_links("https://wolt.com/he/discovery/restaurants", 'אילת')
+    get_restaurant_links("https://wolt.com/he/discovery/restaurants", 'באר שבע')
 
 
 

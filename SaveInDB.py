@@ -39,6 +39,15 @@ def init_database(db_name="restaurants.db"):
     return cursor, conn
 
 
+def returnCitiesNames(cursor):
+    # Execute query to get distinct city names
+    cursor.execute("SELECT DISTINCT city FROM city_restaurants")
+
+    # Fetch all results and extract city names into a list
+    cities = [row[0] for row in cursor.fetchall()]
+    return cities
+
+
 def saveDataInCities(cursor, cityName, restaurantName, restaurantNameEnglish, url):
     cursor.execute('''
                     INSERT INTO city_restaurants (city, restaurant_name, restaurant_name_english, restaurant_url) 

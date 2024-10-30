@@ -1,3 +1,5 @@
+import time
+
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -86,21 +88,34 @@ def checkSpicy(name):
     return 0
 
 
-def checkIfRestaurantExists(cursor, resName, cityName):
-    cursor.execute("""SELECT *
+def checkIfRestaurantExists(cursor, resName, cityName, url):
+    cursor.execute("""SELECT restaurant_url
                    FROM city_restaurants
-                   WHERE restaurant_name=? AND city=?""",
-                   (resName, cityName))
+                   WHERE restaurant_url=?""",
+                   (url,))
 
     result = cursor.fetchone()
-
     if result:
         return True
     else:
         return False
 
 
-def fetchDataFromRestaurant(url, cursor, conn, cityName):
+def removeCityName(name, cities):
+    names = name.split('|')
+    names = [curr.strip() for curr in names]
+    if len(names) == 1:
+        return name
+    if names[0] in cities:
+        return names[1]
+    elif names[1] in cities:
+        return names[0]
+    else:
+        return name
+    pass
+
+
+def fetchDataFromRestaurant(url, cursor, conn, cityName, cities):
     # Headers to mimic a real browser visit (adjust as needed)
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -119,10 +134,11 @@ def fetchDataFromRestaurant(url, cursor, conn, cityName):
         menu_items = []
 
         restaurantName = soup.find(class_='h13fol4s').get_text(strip=True)
+        restaurantName = removeCityName(restaurantName, cities)
         restaurantNameEnglish = url.split('/')[-1]
         print(f'Restaurant Name: {restaurantName}, In English: {restaurantNameEnglish}')
 
-        if checkIfRestaurantExists(cursor, restaurantName, cityName):
+        if checkIfRestaurantExists(cursor, restaurantName, cityName, url):
             print("Data exists!")
             return
         else:
@@ -148,6 +164,7 @@ def fetchDataFromRestaurant(url, cursor, conn, cityName):
             saveDataInMenu(cursor, restaurant_serial, categoryName, name, price, spicy)
         conn.commit()
         print("Finished!")
+        time.sleep(3)  #to prevent Status code: 429
         #return menu_items
 
 
