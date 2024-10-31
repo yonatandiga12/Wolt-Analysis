@@ -6,6 +6,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from tqdm import tqdm
+
 from Connection_to_wolt import *
 from SaveInDB import *
 
@@ -63,9 +65,10 @@ def get_restaurant_links(url, search_text):
         restaurants = driver.find_elements(By.CLASS_NAME, "dzrkw9x")  # Adjust this class name if needed
 
         cities = returnCitiesNames(cursor)
-
+        cities = cities + [search_text]
+        print("Cities: ", cities)
         # Loop through each restaurant and print its href
-        for restaurant in restaurants:
+        for restaurant in tqdm(restaurants):
             link_element = restaurant.find_element(By.TAG_NAME, "a")  # Assuming each restaurant div has an anchor tag
             href = link_element.get_attribute("href")
             print("Restaurant href:", href)

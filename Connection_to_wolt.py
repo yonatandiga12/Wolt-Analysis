@@ -139,7 +139,7 @@ def fetchDataFromRestaurant(url, cursor, conn, cityName, cities):
         print(f'Restaurant Name: {restaurantName}, In English: {restaurantNameEnglish}')
 
         if checkIfRestaurantExists(cursor, restaurantName, cityName, url):
-            print("Data exists!")
+            print("Data exists!\n")
             return
         else:
             saveDataInCities(cursor, cityName, restaurantName, restaurantNameEnglish, url)
@@ -163,8 +163,8 @@ def fetchDataFromRestaurant(url, cursor, conn, cityName, cities):
             #menu_items.append({"category": categoryName, "name": name, "price": price, 'spicy': spicy})
             saveDataInMenu(cursor, restaurant_serial, categoryName, name, price, spicy)
         conn.commit()
-        print("Finished!")
-        time.sleep(2)  #to prevent Status code: 429
+        print("Finished!\n")
+        time.sleep(2)  #to prevent Status code: 429 (too much requests to site)
         #return menu_items
 
 
