@@ -71,8 +71,9 @@ def get_restaurant_links(url, search_text):
         for restaurant in tqdm(restaurants):
             link_element = restaurant.find_element(By.TAG_NAME, "a")  # Assuming each restaurant div has an anchor tag
             href = link_element.get_attribute("href")
-            print("Restaurant href:", href)
+            print("\nRestaurant href:", href)
             fetchDataFromRestaurant(href, cursor, conn, search_text, cities)
+            time.sleep(1.5)
 
     except Exception as e:
         print("An error occurred:", e)

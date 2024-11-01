@@ -164,7 +164,7 @@ def fetchDataFromRestaurant(url, cursor, conn, cityName, cities):
             saveDataInMenu(cursor, restaurant_serial, categoryName, name, price, spicy)
         conn.commit()
         print("Finished!\n")
-        time.sleep(2)  #to prevent Status code: 429 (too much requests to site)
+        #time.sleep(2)  #to prevent Status code: 429 (too much requests to site)
         #return menu_items
 
 
