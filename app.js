@@ -10,6 +10,17 @@ const dashboardURLs = [
     "https://public.tableau.com/views/Wolt-McdonaldsMenu/McdonaldsMenuDash?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
 ];
 
+const dashboardNames = [
+    "Map 1",
+    "Map 2",
+    "Number Of Restaurants In Cities",
+    "Branches Numbers",
+    "Dishes In Chains",
+    "Common Dishes Prices",
+    "Mcdonalds Menu"
+];
+
+
 // Options for all dashboards
 const options = {
     hideTabs: true,
@@ -40,7 +51,8 @@ function setupDashboardTabs() {
         // Create a new tab button
         const tabButton = document.createElement("button");
         tabButton.className = "tablinks";
-        tabButton.innerText = `Dashboardss ${index + 1}`;
+        //tabButton.innerText = `Dashboards ${index + 1}`;
+        tabButton.innerText = dashboardNames[index];
         tabButton.onclick = (event) => {
             openDashboard(event, index);
             initViz(index);
