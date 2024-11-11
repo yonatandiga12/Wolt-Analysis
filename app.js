@@ -6,7 +6,7 @@ const dashboardURLs = [
     "https://public.tableau.com/views/Wolt-Citycounter/Citycounterdashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
     "https://public.tableau.com/views/Wolt-Branchcounter/Restaurantsbranches?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
     "https://public.tableau.com/views/Wolt-NumberOfDishes/Numberofdishes?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
-    "https://public.tableau.com/views/Wolt-PricesOfDishes/Dashboard8?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    "https://public.tableau.com/views/Wolt-CommonDishesPrices/Dashboard8?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
     "https://public.tableau.com/views/Wolt-McdonaldsMenu/McdonaldsMenuDash?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
 ];
 
