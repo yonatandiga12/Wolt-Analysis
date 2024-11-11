@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarms In Israel</title>
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <style>
+        /* Styling for tab navigation */
+        .tab {
+            overflow: hidden;
+            border-bottom: 1px solid #ccc;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tab button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Hide all dashboards initially */
+        .dashboard-container {
+            display: none;
+        }
+
+        /* Style the main container to center everything */
+        .viz {
+            width: 1400px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tab links -->
+    <div class="tab">
+        <button class="tablinks" onclick="openDashboard(event, 'Dashboard1')">Dashboard 1</button>
+        <button class="tablinks" onclick="openDashboard(event, 'Dashboard2')">Dashboard 2</button>
+        <button class="tablinks" onclick="openDashboard(event, 'Dashboard3')">Dashboard 3</button>
+    </div>
+
+    <!-- Dashboard Containers -->
+    <div id="Dashboard1" class="dashboard-container">
+        <h2 class="dashboard-title">Dashboard 1: Alarms in Different Minutes, Hours and Weeks</h2>
+        <div id="vizContainer1" class="viz"></div>
+    </div>
+
+    <div id="Dashboard2" class="dashboard-container">
+        <h2 class="dashboard-title">Dashboard 2: Alarm Analysis by Date</h2>
+        <div id="vizContainer2" class="viz"></div>
+    </div>
+
+    <div id="Dashboard3" class="dashboard-container">
+        <h2 class="dashboard-title">Dashboard 3: Alarm Analysis in Cities</h2>
+        <div id="vizContainer3" class="viz"></div>
+    </div>
+
+    <script src="./app.js"></script>
+    <script>
+        function openDashboard(evt, dashboardName) {
+            // Hide all dashboard containers
+            let containers = document.getElementsByClassName("dashboard-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            // Remove active class from all tab buttons
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Show the selected dashboard and set the button as active
+            document.getElementById(dashboardName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Initialize the first tab and display the first dashboard
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector(".tablinks").click();
+        });
+    </script>
+
+</body>
+</html>
