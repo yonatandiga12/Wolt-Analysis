@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wolt - Interactive Analysis</title>
+    <title>Alarms In Israel - Interactive Analysis</title>
     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
     <style>
         /* Body styling with gradient background */
@@ -93,31 +93,18 @@
 <body>
 
     <!-- Page Title -->
-    <h1>Wolt - Interactive Analysis</h1>
+    <h1>Alarms in Israel - Interactive Analysis</h1>
 
-    <!-- Tab navigation -->
-    <div class="tab">
-        <button class="tablinks" onclick="openDashboard(event, 'Dashboard1')">Dashboard 1</button>
-        <button class="tablinks" onclick="openDashboard(event, 'Dashboard2')">Dashboard 2</button>
-        <button class="tablinks" onclick="openDashboard(event, 'Dashboard3')">Dashboard 3</button>
-    </div>
+    <!-- Tab navigation (populated dynamically) -->
+    <div id="tabContainer" class="tab"></div>
 
-    <!-- Dashboard Containers -->
-    <div id="Dashboard1" class="dashboard-container">
-        <div id="vizContainer1" class="viz"></div>
-    </div>
-
-    <div id="Dashboard2" class="dashboard-container">
-        <div id="vizContainer2" class="viz"></div>
-    </div>
-
-    <div id="Dashboard3" class="dashboard-container">
-        <div id="vizContainer3" class="viz"></div>
-    </div>
+    <!-- Dashboard Containers (populated dynamically) -->
+    <div id="dashboardContainer"></div>
 
     <script src="./app.js"></script>
     <script>
-        function openDashboard(evt, dashboardName) {
+        // Function to open the selected dashboard
+        function openDashboard(evt, dashboardIndex) {
             // Hide all dashboard containers
             let containers = document.getElementsByClassName("dashboard-container");
             for (let i = 0; i < containers.length; i++) {
@@ -131,7 +118,7 @@
             }
 
             // Show the selected dashboard and set the button as active
-            document.getElementById(dashboardName).style.display = "flex";
+            document.getElementById("Dashboard" + dashboardIndex).style.display = "flex";
             evt.currentTarget.classList.add("active");
         }
 
