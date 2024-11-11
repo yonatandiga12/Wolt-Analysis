@@ -3,51 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alarms In Israel</title>
+    <title>Wolt Analysis</title>
     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
     <style>
+        /* Body styling with gradient background */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #2e8b57, #3cb371);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        /* Title styling */
+        h1 {
+            margin: 20px;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000;
+        }
+
         /* Styling for tab navigation */
         .tab {
-            overflow: hidden;
-            border-bottom: 1px solid #ccc;
-            background-color: #f1f1f1;
             display: flex;
             justify-content: center;
+            width: 100%;
+            background-color: #1f1f1f;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .tab button {
-            background-color: inherit;
+            background: transparent;
+            color: #ddd;
             border: none;
             outline: none;
             cursor: pointer;
-            padding: 14px 16px;
-            font-size: 17px;
+            padding: 14px 20px;
+            font-size: 18px;
+            font-weight: bold;
             transition: 0.3s;
         }
 
         .tab button:hover {
-            background-color: #ddd;
+            color: #f1f1f1;
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
         .tab button.active {
-            background-color: #ccc;
+            color: #ffffff;
+            border-bottom: 3px solid #4caf50;
+            font-weight: bold;
         }
 
-        /* Hide all dashboards initially */
+        /* Style for the dashboard container */
         .dashboard-container {
             display: none;
+            padding: 20px;
+            width: 100%;
+            max-width: 1400px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeEffect 0.5s;
         }
 
-        /* Style the main container to center everything */
+        .dashboard-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Style for Tableau visualizations */
         .viz {
-            width: 1400px;
-            margin-top: 20px;
+            width: 100%;
+            height: 800px;
+            margin-top: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Fade effect for dashboard display */
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
         }
     </style>
 </head>
 <body>
 
-    <!-- Tab links -->
+    <!-- Page Title -->
+    <h1>Alarms in Israel - Interactive Analysis</h1>
+
+    <!-- Tab navigation -->
     <div class="tab">
         <button class="tablinks" onclick="openDashboard(event, 'Dashboard1')">Dashboard 1</button>
         <button class="tablinks" onclick="openDashboard(event, 'Dashboard2')">Dashboard 2</button>
@@ -56,17 +110,17 @@
 
     <!-- Dashboard Containers -->
     <div id="Dashboard1" class="dashboard-container">
-        <h2 class="dashboard-title">Dashboard 1: Alarms in Different Minutes, Hours and Weeks</h2>
+        <h2 class="dashboard-title">Dashboard 1</h2>
         <div id="vizContainer1" class="viz"></div>
     </div>
 
     <div id="Dashboard2" class="dashboard-container">
-        <h2 class="dashboard-title">Dashboard 2: Alarm Analysis by Date</h2>
+        <h2 class="dashboard-title">Dashboard 2</h2>
         <div id="vizContainer2" class="viz"></div>
     </div>
 
     <div id="Dashboard3" class="dashboard-container">
-        <h2 class="dashboard-title">Dashboard 3: Alarm Analysis in Cities</h2>
+        <h2 class="dashboard-title">Dashboard 3</h2>
         <div id="vizContainer3" class="viz"></div>
     </div>
 

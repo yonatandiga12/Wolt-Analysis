@@ -1,5 +1,13 @@
 # Wolt Analysis
 
+View the graphs: https://yonatandiga12.github.io/Wolt-Analysis/
+
+
+
+
+
+## Extracting the data
+
 Extracted data from Wolt site, saved in DB and analyzed it.
 
 First I used selenium to enter city name to the input box (it can be done easier by just altering the url of the site, but i wanted to use selenium.

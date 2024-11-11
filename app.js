@@ -1,15 +1,16 @@
 let viz1, viz2, viz3;
 
 // URLs for the Tableau dashboards
-const url1 = "https://public.tableau.com/views/AlarmsIsrael1/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
-const url2 = "https://public.tableau.com/views/AlarmsIsrael2/AlarmsinMonths?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
-const url3 = "https://public.tableau.com/views/AlarmsIsrael3/CitiesDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
+const url1 = "https://public.tableau.com/shared/BS4JR2CW8?:display_count=n&:origin=viz_share_link";
+const url2 = "https://public.tableau.com/views/Wolt-Map2/Dashboard2?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
+const url3 = "https://public.tableau.com/views/Wolt-Citycounter/Citycounterdashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
+
 
 // Options for all dashboards
 const options = {
     hideTabs: true,
-    height: 1000,
-    width: 1600,
+    height: 800,
+    width: 1400,
     onFirstInteraction: function () {
         console.log("Dashboard is interactive");
     }
