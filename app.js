@@ -3,8 +3,11 @@
 const dashboardURLs = [
     "https://public.tableau.com/shared/BS4JR2CW8?:display_count=n&:origin=viz_share_link",
     "https://public.tableau.com/views/Wolt-Map2/Dashboard2?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
-    "https://public.tableau.com/views/Wolt-Citycounter/Citycounterdashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-    // Add more URLs here if needed
+    "https://public.tableau.com/views/Wolt-Citycounter/Citycounterdashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    "https://public.tableau.com/views/Wolt-Branchcounter/Restaurantsbranches?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    "https://public.tableau.com/views/Wolt-NumberOfDishes/Numberofdishes?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    "https://public.tableau.com/views/Wolt-PricesOfDishes/Dashboard8?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    "https://public.tableau.com/views/Wolt-McdonaldsMenu/McdonaldsMenuDash?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
 ];
 
 // Options for all dashboards
@@ -37,7 +40,7 @@ function setupDashboardTabs() {
         // Create a new tab button
         const tabButton = document.createElement("button");
         tabButton.className = "tablinks";
-        tabButton.innerText = `Dashboard ${index + 1}`;
+        tabButton.innerText = `Dashboardss ${index + 1}`;
         tabButton.onclick = (event) => {
             openDashboard(event, index);
             initViz(index);
