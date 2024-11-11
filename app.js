@@ -10,7 +10,7 @@ const url3 = "https://public.tableau.com/views/Wolt-Citycounter/Citycounterdashb
 const options = {
     hideTabs: true,
     height: 800,
-    width: 1400,
+    width: 1200,
     onFirstInteraction: function () {
         console.log("Dashboard is interactive");
     }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wolt Analysis</title>
+    <title>Wolt - Interactive Analysis</title>
     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
     <style>
         /* Body styling with gradient background */
@@ -17,7 +17,7 @@
             margin: 0;
         }
 
-        /* Title styling */
+        /* Page title styling */
         h1 {
             margin: 20px;
             font-size: 36px;
@@ -59,7 +59,7 @@
             font-weight: bold;
         }
 
-        /* Style for the dashboard container */
+        /* Centered dashboard container styling */
         .dashboard-container {
             display: none;
             padding: 20px;
@@ -70,21 +70,15 @@
             margin-top: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             animation: fadeEffect 0.5s;
-        }
-
-        .dashboard-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            text-align: center;
-            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
         }
 
         /* Style for Tableau visualizations */
         .viz {
             width: 100%;
+            max-width: 1200px;
             height: 800px;
-            margin-top: 10px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
@@ -99,7 +93,7 @@
 <body>
 
     <!-- Page Title -->
-    <h1>Alarms in Israel - Interactive Analysis</h1>
+    <h1>Wolt - Interactive Analysis</h1>
 
     <!-- Tab navigation -->
     <div class="tab">
@@ -110,17 +104,14 @@
 
     <!-- Dashboard Containers -->
     <div id="Dashboard1" class="dashboard-container">
-        <h2 class="dashboard-title">Dashboard 1</h2>
         <div id="vizContainer1" class="viz"></div>
     </div>
 
     <div id="Dashboard2" class="dashboard-container">
-        <h2 class="dashboard-title">Dashboard 2</h2>
         <div id="vizContainer2" class="viz"></div>
     </div>
 
     <div id="Dashboard3" class="dashboard-container">
-        <h2 class="dashboard-title">Dashboard 3</h2>
         <div id="vizContainer3" class="viz"></div>
     </div>
 
@@ -140,7 +131,7 @@
             }
 
             // Show the selected dashboard and set the button as active
-            document.getElementById(dashboardName).style.display = "block";
+            document.getElementById(dashboardName).style.display = "flex";
             evt.currentTarget.classList.add("active");
         }
 
