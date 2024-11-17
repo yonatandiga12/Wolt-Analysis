@@ -29,7 +29,7 @@ I used Tableau to show some interesting graphs and insights from this data.
 <br /> 
 <br /> 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yonatandiga12/Wolt_Analysis/master/Images/Map1.jpg" width="1000" title="img1">
+  <img src="https://raw.githubusercontent.com/yonatandiga12/Wolt-Analysis/blob/master/Images/Map1.png.jpg" width="1000" title="img1">
 </p>
 <br /> 
 <br /> 
