@@ -1,6 +1,6 @@
 # Wolt Analysis
 
-View the graphs: https://yonatandiga12.github.io/Wolt-Analysis/
+View the graphs here: https://yonatandiga12.github.io/Wolt-Analysis/
 
 
 
@@ -19,3 +19,13 @@ Then I got inside each restaurant and collected the menu items with their catego
 After each city iteration I scanned the DB to make sure the cities are correct (when ai search tel aviv it can show me restaurant in ramat gan) so it needs to be scanned manually
 
 
+## Viewing the data
+
+I used Tableau to show some interesting graphs and insights from this data.
+
+
+<br>
+<br>
+<br>
+<br>
+The data was collected in early November 2024
