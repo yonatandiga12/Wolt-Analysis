@@ -29,24 +29,25 @@ I used Tableau to show some interesting graphs and insights from this data.
 <br /> 
 <br /> 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yonatandiga12/Wolt-Analysis/blob/master/Images/Map1.png" width="1000" title="img1">
+  <img src="https://raw.githubusercontent.com/yonatandiga12/Wolt-Analysis/master/Images/Map1.png" width="1000" title="img1">
 </p>
 <br /> 
 <br /> 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yonatandiga12/Wolt_Analysis/master/Images/Branches Counter.jpg" width="1000" title="img2">
+  <img src="https://raw.githubusercontent.com/yonatandiga12/Wolt-Analysis/master/Images/Branches Counter.png" width="1000" title="img2">
 </p>
 <br /> 
 <br /> 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yonatandiga12/Wolt_Analysis/master/Images/Branches Dishes.jpg" width="1000" title="img3">
+  <img src="https://raw.githubusercontent.com/yonatandiga12/Wolt-Analysis/master/Images/Branches Dishes.png" width="1000" title="img3">
 </p>
 <br /> 
 <br /> 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yonatandiga12/Wolt_Analysis/master/Images/Dishes Prices.jpg" width="1000" title="img4">
+  <img src="https://raw.githubusercontent.com/yonatandiga12/Wolt-Analysis/master/Images/Dishes Prices.png" width="1000" title="img4">
 </p>
-
+<br /> 
+<br /> 
 
 ### Aditional Info
 The data was collected in early November 2024
