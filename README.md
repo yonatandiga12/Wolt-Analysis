@@ -24,8 +24,30 @@ After each city iteration I scanned the DB to make sure the cities are correct (
 I used Tableau to show some interesting graphs and insights from this data.
 
 
-<br>
-<br>
-<br>
-<br>
+
+## Some Examples:
+<br /> 
+<br /> 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yonatandiga12/Wolt_Analysis/master/Images/Map1.jpg" width="1000" title="img1">
+</p>
+<br /> 
+<br /> 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yonatandiga12/Wolt_Analysis/master/Images/Branches Counter.jpg" width="1000" title="img2">
+</p>
+<br /> 
+<br /> 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yonatandiga12/Wolt_Analysis/master/Images/Branches Dishes.jpg" width="1000" title="img3">
+</p>
+<br /> 
+<br /> 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yonatandiga12/Wolt_Analysis/master/Images/Dishes Prices.jpg" width="1000" title="img4">
+</p>
+
+
+### Aditional Info
 The data was collected in early November 2024
+Got the data from this site: https://wolt.com/he/discovery/restaurants
