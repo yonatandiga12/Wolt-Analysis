@@ -14,6 +14,7 @@ const dashboardURLs = [
 
 ];
 
+
 const dashboardNames = [
     "Map 1",
     "Map 2",
